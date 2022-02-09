@@ -12,11 +12,15 @@ export default {
     },
     created() {
         // Após a criação do componente, executa este método
-        this.nome = 'Guilherme'
+        setTimeout(() => {
+            this.nome = 'Guilherme'
+        }, 1000);
     },
     mounted() {
         // Hierarquicamente abaixo do created, ou seja, é executado depois
-        this.nome = 'Pedro'
+        setTimeout(() => {
+            this.nome = 'Pedro'
+        }, 2000);
     }
 };
 </script>
