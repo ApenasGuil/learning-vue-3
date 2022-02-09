@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "primeiroComponente", // Definindo o nome do componente
+  name: "PrimeiroComponente", // Definindo o nome do componente
   data() {
     // Todos os dados são declarados dentro de data()
     return {
