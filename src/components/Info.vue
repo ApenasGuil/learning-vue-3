@@ -7,6 +7,7 @@
         <li>Laravel</li>
         <li>Python</li>
     </ul>
+    <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
 </template>
 
 <script>
@@ -15,6 +16,8 @@ export default {
     data() {
         return {
             esta_trabalhando: true,
+            mostrar_email: true,
+            email: "guilhermemoraes.dev@gmail.com",
         };
     },
 };
