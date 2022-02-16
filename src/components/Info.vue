@@ -10,13 +10,19 @@
     <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
     <p>
         Para acessar meu portifólio basta
-        <a v-bind:href="meu_link">clicar aqui</a>
+        <a v-bind:href="meu_link" target="_blank">clicar aqui</a>
     </p>
+    <Picture />
 </template>
 
 <script>
+import Picture from "./Picture.vue";
+
 export default {
     name: "Info",
+    components: {
+        Picture,
+    },
     data() {
         return {
             esta_trabalhando: true,
