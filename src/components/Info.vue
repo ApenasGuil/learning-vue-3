@@ -8,6 +8,10 @@
         <li>Python</li>
     </ul>
     <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
+    <p>
+        Para acessar meu portifólio basta
+        <a v-bind:href="meu_link">clicar aqui</a>
+    </p>
 </template>
 
 <script>
@@ -18,6 +22,7 @@ export default {
             esta_trabalhando: true,
             mostrar_email: true,
             email: "guilhermemoraes.dev@gmail.com",
+            meu_link: "https://www.google.com",
         };
     },
 };
