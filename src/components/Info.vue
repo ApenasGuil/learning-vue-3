@@ -7,6 +7,9 @@
         <li>Laravel</li>
         <li>Python</li>
     </ul>
+    <div>
+        <button @click="showEmail">Mostrar e-mail</button>
+    </div>
     <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
     <p>
         Para acessar meu portifólio basta
@@ -26,10 +29,15 @@ export default {
     data() {
         return {
             esta_trabalhando: true,
-            mostrar_email: true,
+            mostrar_email: false,
             email: "guilhermemoraes.dev@gmail.com",
             meu_link: "https://www.google.com",
         };
+    },
+    methods: {
+        showEmail() {
+            this.mostrar_email = !this.mostrar_email;
+        },
     },
 };
 </script>
