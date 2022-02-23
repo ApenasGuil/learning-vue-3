@@ -10,6 +10,12 @@
             {{ technology }}
         </li>
     </ul>
+    <p>Utilizo as seguintes tecnologias para front-end</p>
+    <ul>
+        <li v-for="technology in frontend_technologies" :key="technology.id">
+            {{ technology.language }}
+        </li>
+    </ul>
     <div>
         <button @click="showEmail">{{ textoBotao }}</button>
     </div>
@@ -36,7 +42,22 @@ export default {
             email: "guilhermemoraes.dev@gmail.com",
             meu_link: "https://www.google.com",
             textoBotao: "Mostrar e-mail",
-            backend_technologies: ["JavaScript", "Laravel", "Python"],
+            backend_technologies: ["JavaScript", "Laravel", "Python"], // array
+            frontend_technologies: [
+                // array de objetos
+                {
+                    id: 1,
+                    language: "HTML",
+                },
+                {
+                    id: 2,
+                    language: "CSS",
+                },
+                {
+                    id: 3,
+                    language: "Bootstrap",
+                },
+            ],
         };
     },
     methods: {
