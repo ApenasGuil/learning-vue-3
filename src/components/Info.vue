@@ -8,10 +8,10 @@
         <li>Python</li>
     </ul>
     <div>
-        <button @click="showEmail">Mostrar e-mail</button>
+        <button @click="showEmail">{{ textoBotao }}</button>
     </div>
     <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
-    <p>
+    <p class="teste">
         Para acessar meu portifólio basta
         <a v-bind:href="meu_link" target="_blank">clicar aqui</a>
     </p>
@@ -32,12 +32,24 @@ export default {
             mostrar_email: false,
             email: "guilhermemoraes.dev@gmail.com",
             meu_link: "https://www.google.com",
+            textoBotao: "Mostrar e-mail",
         };
     },
     methods: {
         showEmail() {
             this.mostrar_email = !this.mostrar_email;
+            if (!this.mostrar_email) {
+                this.textoBotao = "Mostrar e-mail";
+            } else {
+                this.textoBotao = "Esconder e-mail";
+            }
         },
     },
 };
 </script>
+
+<style>
+.paragrafo-pai {
+    color: red;
+}
+</style>

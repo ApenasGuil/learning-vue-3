@@ -1,20 +1,44 @@
 <template>
+    <Header />
     <PrimeiroComponente />
+    <p class="paragrafo-pai">O dado do app é: {{ testando }}</p>
     <LifeCycle />
     <Pessoa />
 </template>
 
 <script>
+import Header from "./components/Header.vue";
 import PrimeiroComponente from "./components/PrimeiroComponente.vue";
 import LifeCycle from "./components/LifeCycle.vue";
 import Pessoa from "./components/Pessoa.vue";
 
 export default {
+    name: "App",
     components: {
+        Header,
         PrimeiroComponente,
         LifeCycle,
         Pessoa,
     },
-    name: "App",
+    data() {
+        return {
+            testando: "Teste",
+        };
+    },
 };
 </script>
+
+<style>
+body {
+    background-color: #333;
+    color: #fff;
+}
+
+a {
+    color: #f00;
+}
+
+.teste {
+    background-color: #000;
+}
+</style>
