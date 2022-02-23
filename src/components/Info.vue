@@ -1,11 +1,14 @@
 <template>
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades!</p>
-    <p>Utilizo as seguintes tecnologias:</p>
+    <p>Utilizo as seguintes tecnologias para back-end:</p>
     <ul>
-        <li>JavaScript</li>
-        <li>Laravel</li>
-        <li>Python</li>
+        <li
+            v-for="(technology, index) in backend_technologies"
+            v-bind:key="index"
+        >
+            {{ technology }}
+        </li>
     </ul>
     <div>
         <button @click="showEmail">{{ textoBotao }}</button>
@@ -33,6 +36,7 @@ export default {
             email: "guilhermemoraes.dev@gmail.com",
             meu_link: "https://www.google.com",
             textoBotao: "Mostrar e-mail",
+            backend_technologies: ["JavaScript", "Laravel", "Python"],
         };
     },
     methods: {
