@@ -1,4 +1,5 @@
 <template>
+    <p>{{ email }}</p>
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades!</p>
     <p>Utilizo as seguintes tecnologias para back-end:</p>
@@ -35,11 +36,14 @@ export default {
     components: {
         Picture,
     },
+    props: {
+        email: String,
+    },
     data() {
         return {
             esta_trabalhando: true,
             mostrar_email: false,
-            email: "guilhermemoraes.dev@gmail.com",
+            // email: "guilhermemoraes.dev@gmail.com",
             meu_link: "https://www.google.com",
             textoBotao: "Mostrar e-mail",
             backend_technologies: ["JavaScript", "Laravel", "Python"], // array
