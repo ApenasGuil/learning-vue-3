@@ -5,14 +5,19 @@
         <code>{{ profissao }}</code>
     </p>
     <MultiplosEventos />
+    <Reutilizacao />
+    <Reutilizacao />
+    <Reutilizacao />
 </template>
 
 <script>
 import MultiplosEventos from "./MultiplosEventos.vue";
+import Reutilizacao from "./Reutilizacao.vue";
 export default {
     name: "PrimeiroComponente", // Definindo o nome do componente
     components: {
         MultiplosEventos,
+        Reutilizacao,
     },
     data() {
         // Todos os dados são declarados dentro de data()
