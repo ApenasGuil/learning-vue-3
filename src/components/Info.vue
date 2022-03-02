@@ -38,10 +38,11 @@ export default {
     },
     props: {
         email: String,
+        esta_trabalhando: Boolean,
     },
     data() {
         return {
-            esta_trabalhando: true,
+            // esta_trabalhando: true,
             mostrar_email: false,
             // email: "guilhermemoraes.dev@gmail.com",
             meu_link: "https://www.google.com",

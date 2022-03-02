@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Esta é a descrição da pessoa: {{ nome }}</h2>
-        <Info :email="email" />
+        <Info :email="email" :esta_trabalhando="false" />
         <Form />
     </div>
 </template>
